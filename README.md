@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Puedes ver el proyecto y probarlo. [Ver el proyecto de administrador de citas](https://franbcn93.github.io/AdminCitas/).
 
 ## Available Scripts
 
