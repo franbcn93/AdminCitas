@@ -28,6 +28,7 @@ export const Formulario = ({ crearCita }) => {
   const submitCita = (e) => {
     e.preventDefault();
 
+    
     //   Validar
     if (
       mascota.trim() === "" ||
@@ -55,13 +56,14 @@ export const Formulario = ({ crearCita }) => {
 
   return (
     <Fragment>
-      <h2>Crear citas</h2>
+      <h2 data-testid="titulo">Crear citas</h2>
       {error ? (
-        <p className="alerta-error">Todos los campos son obligatorios</p>
+        <p data-testid="alerta" className="alerta-error">Todos los campos son obligatorios</p>
       ) : null}
       <form onSubmit={submitCita} action="">
         <label htmlFor="">Nombre mascota</label>
         <input
+          data-testid="mascota"
           type="text"
           name="mascota"
           className="u-full-width"
@@ -71,6 +73,7 @@ export const Formulario = ({ crearCita }) => {
         />
         <label htmlFor="">Nombre dueño</label>
         <input
+          data-testid="propietario"
           type="text"
           name="propietario"
           className="u-full-width"
@@ -80,6 +83,7 @@ export const Formulario = ({ crearCita }) => {
         />
         <label htmlFor="">Fecha</label>
         <input
+          data-testid="fecha"
           type="date"
           name="fecha"
           className="u-full-width"
@@ -88,6 +92,7 @@ export const Formulario = ({ crearCita }) => {
         />
         <label htmlFor="">Hora</label>
         <input
+          data-testid="hora"
           type="time"
           name="hora"
           className="u-full-width"
@@ -96,6 +101,7 @@ export const Formulario = ({ crearCita }) => {
         />
         <label htmlFor="">Síntomas</label>
         <textarea
+          data-testid="sintomas"    
           name="sintomas"
           id=""
           style={{ width: "100%" }}
@@ -103,7 +109,10 @@ export const Formulario = ({ crearCita }) => {
           onChange={actualizarState}
           value={sintomas}
         ></textarea>
-        <button type="submit" className="u-full-width button-primary">
+        <button 
+        data-testid="btn-submit"
+        type="submit" 
+        className="u-full-width button-primary">
           Agregar cita
         </button>
       </form>

@@ -36,14 +36,14 @@ function App() {
 
   return (
     <Fragment>
-      <h1>Administrador de Pacientes</h1>;
+      <h1 data-testid="nombre-app">Administrador de Pacientes</h1>;
       <div className="container">
         <div className="row">
           <div className="one-half column">
             <Formulario crearCita={crearCita} />
           </div>
           <div className="one-half column">
-            <h2>{titulo}</h2>
+            <h2 data-testid="titulo-dinamico">{titulo}</h2>
             {citas.map((cita) => (
               <Cita key={cita.id} cita={cita} eliminarCita={eliminarCita} />
             ))}
